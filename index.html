@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Vidhi ❤️</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #fff;
+      background: #1f0d1b;
+      overflow-x: hidden;
+    }
+    .hearts {
+      position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 1;
+    }
+    .heart {
+      position: absolute; bottom: -40px; font-size: 22px; opacity: 0.75;
+      animation: floatUp 9s linear infinite;
+    }
+    .heart:nth-child(1) { left: 8%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 36%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 52%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 68%; animation-delay: 3s; }
+    .heart:nth-child(6) { left: 82%; animation-delay: 5s; }
+    .heart:nth-child(7) { left: 94%; animation-delay: 1.5s; }
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.85; }
+      100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+    }
+    .hero {
+      min-height: 100vh; position: relative; display: grid; place-items: center;
+      text-align: center; padding: 30px;
+      background: linear-gradient(rgba(32,8,30,.38), rgba(32,8,30,.85)), url('memory11.jpeg') center/cover no-repeat;
+    }
+    .hero-content {
+      max-width: 880px; position: relative; z-index: 2; animation: fadeIn 1.5s ease;
+    }
+    .eyebrow {
+      font-size: 1.1rem; letter-spacing: 4px; text-transform: uppercase;
+      color: #ffd6e8; margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(3rem, 9vw, 7rem); line-height: .95; margin-bottom: 22px;
+      text-shadow: 0 8px 30px rgba(0,0,0,.45);
+    }
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem); line-height: 1.7;
+      color: #fff4fa; margin-bottom: 32px;
+    }
+    .btn {
+      display: inline-block; padding: 16px 28px; border-radius: 999px;
+      background: linear-gradient(135deg, #ff4f93, #ffb86b);
+      color: white; text-decoration: none; font-family: Arial, sans-serif; font-weight: 700;
+      box-shadow: 0 15px 35px rgba(255,79,147,.35);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .btn:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 20px 45px rgba(255,79,147,.5); }
+    section { position: relative; z-index: 2; padding: 80px 22px; }
+    .section-inner { max-width: 1180px; margin: auto; }
+    .title { text-align: center; color: #ffe1ef; font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 35px; }
+    .message-card {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(18px); border-radius: 32px; padding: clamp(26px, 5vw, 55px);
+      box-shadow: 0 25px 70px rgba(0,0,0,.25);
+    }
+    .message-card p { font-size: 1.15rem; line-height: 1.95; color: #fff6fb; margin-bottom: 22px; }
+    .story-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px;
+    }
+    .story-card {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      padding: 24px; border-radius: 24px; text-align: center;
+    }
+    .story-card h3 { color: #ffd6e8; margin-bottom: 10px; }
+    .story-card p { color: #fff4fa; line-height: 1.6; }
+    .gallery {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px;
+    }
+    .photo {
+      position: relative; overflow: hidden; border-radius: 28px; min-height: 430px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.35); transform: rotate(-1deg);
+      transition: transform .35s ease;
+    }
+    .photo:nth-child(even) { transform: rotate(1deg); }
+    .photo:hover { transform: rotate(0deg) scale(1.02); }
+    .photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .7s ease;
+    }
+    .photo:hover img { transform: scale(1.08); }
+    .caption {
+      position: absolute; left: 0; right: 0; bottom: 0; padding: 24px;
+      background: linear-gradient(transparent, rgba(0,0,0,.72));
+      color: #fff; font-size: 1.1rem;
+    }
+    .gift {
+      text-align: center;
+      background: radial-gradient(circle at top, rgba(255,94,154,.35), transparent 45%),
+                  linear-gradient(135deg, #2b0f24, #4a143a);
+    }
+    .gift-box {
+      max-width: 780px; margin: auto; background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25); border-radius: 34px;
+      padding: clamp(30px, 6vw, 60px); box-shadow: 0 30px 80px rgba(0,0,0,.35);
+    }
+    .gift-icon { font-size: 5rem; animation: bounce 1.8s infinite; margin-bottom: 20px; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+    footer { text-align: center; padding: 34px 20px; color: #ffd7e8; position: relative; z-index: 2; }
+    @media (max-width: 760px) {
+      .gallery, .story-grid { grid-template-columns: 1fr; }
+      .photo { min-height: 360px; }
+      section { padding: 58px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">
+    <div class="heart">❤️</div><div class="heart">💕</div><div class="heart">💖</div>
+    <div class="heart">✨</div><div class="heart">💗</div><div class="heart">🌸</div><div class="heart">❤️</div>
+  </div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">A little birthday surprise</div>
+      <h1>Happy Birthday, Vidhi ❤️</h1>
+      <p>From quiet moments to big adventures, every memory becomes beautiful because I get to share it with you.</p>
+      <a class="btn" href="#message">Read My Heart</a>
+    </div>
+  </header>
+
+  <section id="message">
+    <div class="section-inner">
+      <h2 class="title">For My Beautiful Wife</h2>
+      <div class="message-card">
+        <p>Happy Birthday, my love. Every year on this day, the world gets to celebrate the most special person in my life, but for me, every single day with you feels like a reason to be grateful. You bring warmth into my life in a way that words can never fully explain. Your smile makes ordinary days feel special, your presence makes every place feel like home, and your love gives me strength in ways you may not even realize.</p>
+        <p>I am so proud of the woman you are — strong, caring, beautiful, hardworking, and full of dreams. Watching you grow, achieve your goals, and keep moving forward inspires me every day. Whether we are celebrating milestones, exploring new places, laughing over small things, or simply sitting together quietly, every moment with you becomes a memory I want to keep forever.</p>
+        <p>Thank you for being my partner, my best friend, my comfort, and my forever person. Thank you for choosing me, supporting me, loving me, and filling my life with happiness. I hope this new year brings you endless joy, success, peace, love, and everything your heart wishes for.</p>
+        <p>I promise to keep celebrating you, standing beside you, making you smile, and creating many more beautiful chapters together. You deserve the whole world, and this little surprise is just one small way to remind you how much you mean to me.</p>
+        <p><strong>Happy Birthday, Vidhi. I love you today, tomorrow, and always. ❤️</strong></p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-card"><h3>Our Beginning</h3><p>Every beautiful journey starts with one person who makes life feel different. For me, that person is you.</p></div>
+        <div class="story-card"><h3>Our Adventures</h3><p>From beaches to mountains, city streets to quiet sunsets, every place becomes special when you are with me.</p></div>
+        <div class="story-card"><h3>Our Forever</h3><p>I look forward to all the birthdays, dreams, laughter, trips, and memories waiting for us ahead.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <h2 class="title">Our Beautiful Memories</h2>
+      <div class="gallery">
+        <div class="photo"><img src="memory1.jpeg" alt="Memory 1"><div class="caption">Every milestone feels more meaningful with you.</div></div>
+        <div class="photo"><img src="memory2.jpeg" alt="Memory 2"><div class="caption">Proud of you, always and forever.</div></div>
+        <div class="photo"><img src="memory3.jpeg" alt="Memory 3"><div class="caption">Little adventures, big memories.</div></div>
+        <div class="photo"><img src="memory4.jpeg" alt="Memory 4"><div class="caption">My favorite view is always you.</div></div>
+        <div class="photo"><img src="memory5.jpeg" alt="Memory 5"><div class="caption">A beautiful day, a beautiful smile, a beautiful memory.</div></div>
+        <div class="photo"><img src="memory6.jpeg" alt="Memory 6"><div class="caption">From city lights to star-studded streets, every trip is better with you.</div></div>
+        <div class="photo"><img src="memory7.jpeg" alt="Memory 7"><div class="caption">A simple selfie, but a memory I will always keep close.</div></div>
+        <div class="photo"><img src="memory8.jpeg" alt="Memory 8"><div class="caption">Small moments like this remind me how lucky I am.</div></div>
+        <div class="photo"><img src="memory9.jpeg" alt="Memory 9"><div class="caption">With you, even mountains and waterfalls feel more magical.</div></div>
+        <div class="photo"><img src="memory10.jpeg" alt="Memory 10"><div class="caption">Our adventures keep getting more beautiful.</div></div>
+        <div class="photo"><img src="memory11.jpeg" alt="Memory 11"><div class="caption">Golden skies, Golden Gate, and my forever person.</div></div>
+        <div class="photo"><img src="memory12.jpeg" alt="Memory 12"><div class="caption">Peaceful places feel warmer when you are beside me.</div></div>
+        <div class="photo"><img src="memory13.jpeg" alt="Memory 13"><div class="caption">Every beach, every breeze, every road feels like home with you.</div></div>
+        <div class="photo"><img src="memory14.jpeg" alt="Memory 14"><div class="caption">A picture full of sunshine, smiles, and love.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gift">
+    <div class="gift-box">
+      <div class="gift-icon">🎁</div>
+      <h2 class="title">One More Surprise</h2>
+      <p style="font-size:1.15rem;line-height:1.8;margin-bottom:30px;color:#fff6fb;">
+        Every queen deserves a little pampering. This is a small birthday gift for you, but my real gift is the promise to keep loving you, cheering for you, and making memories with you for the rest of our lives.
+      </p>
+      <a class="btn" target="_blank" href="https://sephora.cashstar.com/self_service/login/7884c60a5f1adbb37baddf5e5838da8f4403d9b1ffd743b2f7db6e7aa826cfad/">🎁 Open Your Birthday Gift</a>
+    </div>
+  </section>
+
+  <footer>Made with love, just for you ❤️</footer>
+</body>
+</html>
